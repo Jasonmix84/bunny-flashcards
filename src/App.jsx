@@ -36,6 +36,11 @@ const App = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleShuffle = () => {
+    const incrementVal = Math.floor(Math.random() * 7) + 1; // Randomly increment by 1 or 2
+    setCurrentIndex(incrementVal % NUM_OF_CARDS);
+  };
+
   const handleIncrement = () => {
     if (currentIndex < NUM_OF_CARDS - 1) {
       setCurrentIndex(currentIndex + 1);
@@ -59,8 +64,9 @@ const App = () => {
         you are in the right place! This is especially useful for new bunny parents.<br></br>
         </h3>
         <h4>By clicking on the flash cards you can view the answer on the back <br></br>
-           to go to the next card click the right arrow on the bottom right corner of the card.<br></br>
-            If you want to go back to the previous card click the left arrow on the bottom left corner of the card.<br></br>
+          Clicking the middle shuffle button will display a random card<br></br>
+          To go to the next card click the right arrow on the bottom right corner of the card.<br></br>
+          If you want to go back to the previous card click the left arrow on the bottom left corner of the card.<br></br>
         </h4>
         <h3>Total Number of Cards: {NUM_OF_CARDS}</h3>
         
@@ -70,7 +76,7 @@ const App = () => {
       </div>
       <div className="button-containers">
           <button className="left-button" onClick={handleDecrement}>←</button>
-       
+          <button className="shuffle-button" onClick={handleShuffle}><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfLpwqAgS72r8YE6aUbFkSjnNEmh2KYp3NNA&s' height="30px"></img></button>
           <button className="right-button" onClick={handleIncrement}>→</button>
       </div>
 
