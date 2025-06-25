@@ -1,4 +1,4 @@
-# Web Development Project 3 - *Bunny-Flashcards*
+# Web Development Project 3 - *Bunny-Flashcards Part2*
 
 Submitted by: **Jason Rojas**
 
