@@ -35,3 +35,12 @@ body {
   border-radius: 5px;
   margin-bottom: 20px;
 }
+
+.textbox {
+  color: black;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  width: 335px;
+}
